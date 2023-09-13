@@ -5,8 +5,10 @@ class MyComponent extends React.Component {
     // cu phap jsx, only react has this, cho phep viet code javascript in a html
     render(){
         return (
+            // only 1 <div></div> in a jsx, to write code in <div></div> using {code} --> example: {Math.random()}
             <div>
-                My first component
+                My first component and 
+                {Math.random()}
             </div>
         );
     }
