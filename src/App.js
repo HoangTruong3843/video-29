@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
-import MyComponent from './components/MyComponent';
+import MyComponent from './components/MyComponent';                 // "./" mean ở cùng cấp thư mục, "../" means thư mục parent của thư mục hiện
 const App = () => {
   const count = useSelector(state => state.counter.count);
   const dispatch = useDispatch();
