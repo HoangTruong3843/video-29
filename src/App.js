@@ -3,29 +3,42 @@ import './App.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { increaseCounter, decreaseCounter } from './redux/action/counterAction';
 import MyComponent from './components/MyComponent';                 // "./" mean ở cùng cấp thư mục, "../" means thư mục parent của thư mục hiện
-const App = () => {
-  const count = useSelector(state => state.counter.count);
-  const dispatch = useDispatch();
+import React from 'react';
 
-  return (
-    //su dung khong hac gi 1 cai tag <mycomponent></mycomponent>
-    <div>
-      Hello anh hoang dep trai 
-      
-      <MyComponent></MyComponent>   
+class App extends React.Component{
+
+  state ={
+    name: 'Hoang',
+    address: 'Temple',
+    age: '26'
+  };
+  // with react, chung ta co the ket hop javascript voi html
+
+  render(){
+    return (<div>
+      My name is {this.state.name}, and I'm from {this.state.address}
     </div>
-    // <div className="App">
-    //   <header className="App-header">
-    //     <img src={logo} className="App-logo" alt="logo" />
-    //     <p>
-    //       hoi dan it, helloworld .
-    //     </p>
-    //     <div>Count = {count}</div>
-    //     <button onClick={() => dispatch(increaseCounter())}>Increase</button>
-    //     <button onClick={() => dispatch(decreaseCounter())}>Decrease</button>
-    //   </header>
-    // </div>
-  );
+    );
+  }
 }
+
+// const App = () => {
+//   const count = useSelector(state => state.counter.count);
+//   const dispatch = useDispatch();
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           hoi dan it, helloworld .
+//         </p>
+//         <div>Count = {count}</div>
+//         <button onClick={() => dispatch(increaseCounter())}>Increase</button>
+//         <button onClick={() => dispatch(decreaseCounter())}>Decrease</button>
+//       </header>
+//     </div>
+//   );
+// }
 
 export default App;

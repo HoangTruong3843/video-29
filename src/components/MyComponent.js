@@ -9,8 +9,7 @@ class MyComponent extends React.Component {
         return (
             // only 1 <div></div> in a jsx, to write code in <div></div> using {code} --> example: {Math.random()}
             <div>
-                My first component and 
-                {Math.random()}
+                this is my first component
             </div>
         );
     }
