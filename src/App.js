@@ -7,17 +7,12 @@ import React from 'react';
 
 class App extends React.Component{
 
-  state ={
-    name: 'Hoang',
-    address: 'Temple',
-    age: '26'
-  };
+  
   // with react, chung ta co the ket hop javascript voi html
 
   render(){
-    return (<div>
-      My name is {this.state.name}, and I'm from {this.state.address}
-    </div>
+    return (
+      <MyComponent>asdasdasd</MyComponent>
     );
   }
 }
