@@ -25,11 +25,14 @@ class MyComponent extends React.Component {
     }
     myInfo2(event){                                     //nếu k dùng arrow function mà vẫn giữ cách khai báo function cũ --> fix ở dưới
         console.log("Hi! My name is ",this.state.name, "and I'm from ", this.state.address)
+        this.setState({ name:'HoangDayNe', age: Math.floor(Math.random()*100)})   // nếu state được gọi sẽ show name == "HoangDayNe" và "state" name được updated shown in myComponent
     }
     render(){
         return (
             // only 1 <div></div> in a jsx, to write code in <div></div> using {code} --> example: {Math.random()}
             <div>
+                My name is {this.state.name} and I'm {this.state.age}
+                <p></p>
                 <button onClick={this.myFunction}> click me hehe</button>
                 <button onClick={this.handleClick}>another click me</button>
                 <button onMouseOver={this.handleOnMouseOver}>hover me onMouseOver </button> 
