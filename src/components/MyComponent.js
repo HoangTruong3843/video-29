@@ -7,21 +7,24 @@ import DisplayInfor from './DisplayInfor';
 class MyComponent extends React.Component {
     // cu phap jsx, only react has this, cho phep viet code javascript in a html
     // ham render() giup chuyen doi cu phap jsx và giuóp nó hiển thị trên giao diện
-    
+    state={
+        listUsers:[
+            {id: 1, name: "Huy Truong",age:"18"},
+            {id: 2, name: "Hoang Truong",age:"19"},
+            {id: 3, name: "Huy Hoang",age:"20"},
+        ]
+    }
     render(){
-        const myInfor = ['a','b','c']
+        
         return (
-            //props: properties
-            //line 22, chúng ta vẫn có thể assign một prop khác không thuộc cha cho prop?
-            //con --> ex: myInfor.
+            // thông thường đặt tên biến và giá trị muốn gán giống hệt nhau (listUsers)
             <div>
                 
                 <UserInfor></UserInfor>
                 <br/> 
-                <DisplayInfor name = "HoangDeptrai" age="25"> </DisplayInfor>
-                <hr></hr>
-                <DisplayInfor name = "ThatSuRatDT" age="26" myInfor={myInfor}/>
-            </div>
+                <DisplayInfor listUsers ={this.state.listUsers}/>
+                
+            </div> 
         );  
     }
 }

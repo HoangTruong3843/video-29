@@ -12,7 +12,7 @@ class App extends React.Component{
 
   render(){
     return (
-      <MyComponent>asdasdasd</MyComponent>
+      <MyComponent></MyComponent>
     );
   }
 }
